@@ -1,16 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>DemoBlog</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css"/>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container mx-auto items-center ">
+        <div class="w-full text-blueGray-700 rounded-lg">
+          <div class="flex flex-col flex-wrap p-5 w-3/4 mx-auto justify-between  md:items-center md:flex-row">
+            <a href="/" class="pr-2 lg:pr-8 lg:px-6 focus:outline-none">
+              <div class="inline-flex items-center">
+                <div class="w-2 h-2 p-2 mr-2 rounded-full bg-gradient-to-tr from-blue-500 to-blue-600">
+                </div>
+                <h2 class="block p-2 text-xl font-medium tracking-tighter text-black transition duration-500 ease-in-out transform cursor-pointer hover:text-blueGray-500 lg:text-x lg:mr-8"> Demo-Blog </h2>
+              </div>
+            </a>
+            <%= link_to "Create new Post",new_post_path, class:"w-auto px-8 py-2 my-2 text-base font-medium text-white transition duration-500 ease-in-out transform bg-blue-600 border-blue-600 rounded-md focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:bg-blue-700" %>
+          </div>
+    </div>
+
+    <div class="container mx-auto my-8">
+      <%= yield %>
+    </div>
   </body>
 </html>

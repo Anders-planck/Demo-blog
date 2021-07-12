@@ -1,0 +1,5 @@
+<div class="w-full p-4 mt-6 border-4 border-b-0 rounded shadow-sm">
+    <h1 class="pt-3 font-mono text-xl uppercase"> <%=@post.title %></h1>
+    <h1 class="pt-3 font-sans mb-6 text-base "> <%=@post.content %></h1>
+    <%= link_to "Posts", posts_path, class:"mt-6 w-auto px-8 py-2  text-base font-medium text-white transition duration-500 ease-in-out transform bg-blue-600 border-blue-600 rounded-md focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:bg-blue-700" %>
+</div>

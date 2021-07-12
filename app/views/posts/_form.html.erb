@@ -1,0 +1,15 @@
+
+<div class="w-full p-4 mt-6 border-4 border-b-0 rounded shadow-sm">
+  <%=simple_form_for @post do |f| %>
+    <div class="mt-6">
+      <%= f.input :title ,input_html:{ class: "rounded border-2 border-gray-300 p-2 w-md mt-2 w-full"},wrapper:false,label_html:{class:"text-xl font-semibold mr-2 font-sans"} %>
+    </div>
+    <div class="mt-6">
+      <%= f.input :content ,input_html:{ class: "rounded border-2 border-gray-300 p-2 w-md mt-2 w-full"},wrapper:false,label_html:{class:"text-xl font-semibold mr-2 font-sans"} %>
+    </div>
+
+    <div class="mt-6">
+      <%= f.button  :submit ,"Edit new post"  , class: "bg-green-500 cursor-pointer  px-4 py-2 text-white text-xl rounded  " %>
+    </div>
+  <%end%>
+</div>

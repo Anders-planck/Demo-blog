@@ -3,3 +3,12 @@
     <h1 class="pt-3 font-sans mb-6 text-base "> <%=@post.content %></h1>
     <%= link_to "Posts", posts_path, class:"mt-6 w-auto px-8 py-2  text-base font-medium text-white transition duration-500 ease-in-out transform bg-blue-600 border-blue-600 rounded-md focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:bg-blue-700" %>
 </div>
+
+
+<div class="p-4 w-full mt-6 border border-b-0 rounded ">
+ <strong> <%= @post.comments.count %> </strong>Comments
+  <%= render  @post.comments %>
+  <div class="w-3/4 p-4 mt-4 border-4 border-b-0 mx-auto rounded">
+    <%= render "comments/form" %>
+  </div>
+</div>

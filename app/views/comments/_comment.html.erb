@@ -1,0 +1,7 @@
+<div class="w-3/4 p-4 mt-4 border-4 border-b-0 mx-auto rounded ">
+  <h1 class="pt-3  text-lg uppercase"> <%=comment.title %></h1>
+  <h1 class="pt-3  mb-6 text-md "> <%=comment.content %></h1>
+  <%= link_to "Delete",[comment.post,comment],method: :delete, data:{ confirm: "Are you sure"}, class:"w-auto px-8 py-2 my-2 text-base font-medium text-white transition duration-500 ease-in-out transform bg-red-600 border-red-600 rounded-md focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:bg-red-700"%>
+
+</div>
+
